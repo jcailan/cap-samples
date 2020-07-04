@@ -19,5 +19,8 @@
 				"kind": "hana"
 			}
 		}
+	},
+	"devDependencies": {
+		"sqlite3": "^5.0.0"
 	}
 }
