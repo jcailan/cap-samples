@@ -1,0 +1,70 @@
+_schema-version: "3.1"
+ID: cap-samples
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install
+        - npx cds build
+
+modules:
+  - name: cap-samples-app-router
+    type: approuter.nodejs
+    path: app-router
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: cap-samples-uaa
+      - name: srv_api
+        group: destinations
+        properties:
+          name: srv_api
+          url: "~{url}"
+          forwardAuthToken: true
+
+  - name: cap-samples-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      disk-quota: 1024M
+      memory: 256M
+    properties:
+      EXIT: 1
+    requires:
+      - name: cap-samples-db
+      - name: cap-samples-uaa
+    provides:
+      - name: srv_api
+        properties:
+          url: ${default-url}
+
+  - name: db
+    type: hdb
+    path: gen/db
+    parameters:
+      app-name: cap-samples-db
+    requires:
+      - name: cap-samples-db
+      - name: cap-samples-uaa
+
+resources:
+  - name: cap-samples-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+    properties:
+      hdi-service-name: ${service-name}
+
+  - name: cap-samples-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json

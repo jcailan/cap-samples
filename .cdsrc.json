@@ -1,1 +1,16 @@
-{}
+{
+	"auth": {
+		"passport": {
+			"strategy": "mock",
+			"users": {
+				"jhodel": {
+					"password": "1234",
+					"ID": "jhodel",
+					"roles": [
+						"authenticated-user"
+					]
+				}
+			}
+		}
+	}
+}

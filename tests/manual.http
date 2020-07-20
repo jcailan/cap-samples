@@ -1,0 +1,12 @@
+POST http://localhost:4004/NorthWind/Products HTTP/1.1
+Authorization: Basic jhodel:1234
+Content-Type: application/json;IEEE754Compatible=true
+
+{
+    "Name": "Tuna",
+    "Description": "Raw Tuna",
+    "ReleaseDate": "1992-01-01T00:00:00Z",
+    "DiscontinuedDate": null,
+    "Rating": 4,
+    "Price": "2.5"
+}

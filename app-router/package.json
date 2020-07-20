@@ -1,0 +1,13 @@
+{
+	"name": "app-router",
+	"description": "Node.js based application router service",
+	"engines": {
+		"node": "^8.0.0 || ^10.0.0"
+	},
+	"dependencies": {
+		"@sap/approuter": "6.8.0"
+	},
+	"scripts": {
+		"start": "node node_modules/@sap/approuter/approuter.js"
+	}
+}
