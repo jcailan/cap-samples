@@ -6,3 +6,4 @@ The sample projects are arranged in different topics and are kept in different b
 ## Contents
 
 - [CAP: Using HANA DB Sequence](https://github.com/jcailan/cap-samples/tree/blog-db-sequence)
+- [CAP: Demystify User Authentication](https://github.com/jcailan/cap-samples/tree/blog-user-authentication)
