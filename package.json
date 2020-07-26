@@ -1,12 +1,16 @@
 {
-	"name": "azure-devops",
-	"version": "0.0.1",
-	"description": "A Demo of Azure DevOps CI/CD",
-	"repository": "https://github.com/jcailan/azure-devops",
-	"license": "MIT",
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "A simple CAP project.",
+	"repository": "<Add your repository here>",
+	"license": "UNLICENSED",
+	"private": true,
 	"dependencies": {
 		"@sap/cds": "^3",
 		"express": "^4"
+	},
+	"devDependencies": {
+		"sqlite3": "^4.2.0"
 	},
 	"scripts": {
 		"start": "npx cds run"
@@ -17,7 +21,7 @@
 				"kind": "odata",
 				"model": "srv/external/NorthWind",
 				"credentials": {
-					"url": "https://services.odata.org/Experimental/OData/OData.svc"
+					"destination": "NorthWind"
 				}
 			}
 		}

@@ -1,7 +1,7 @@
-# CAP: Consume External Service - Part 1
+# CAP: Consume External Service - Part 2
 
 The details for this CAP sample project is outlined in the blog post below:
-- [CAP: Consume External Service – Part 1](https://blogs.sap.com/2020/05/26/cap-consume-external-service-part-1/)
+- [CAP: Consume External Service – Part 2](https://blogs.sap.com/2020/05/27/cap-consume-external-service-part-2/)
 
 ## Additional Information
 

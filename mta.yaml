@@ -1,0 +1,44 @@
+## Generated mta.yaml based on template version 0.2.0
+## appName = demo
+## language=nodejs; multiTenant=false
+## approuter=
+_schema-version: '3.1'
+ID: demo
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+  
+  
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm install
+      - npx cds build
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: demo-srv
+ # ------------------------------------------------------------
+   type: nodejs
+   path: gen/srv
+   properties:
+     EXIT: 1  # required by deploy.js task to terminate 
+   requires:
+     - name: demo-destination
+     - name: demo-uaa
+
+
+resources:
+ - name: demo-destination
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: demo-destination
+
+ - name: demo-uaa
+   type: org.cloudfoundry.managed-service
+   parameters:
+     path: ./xs-security.json
+     service: xsuaa
+     service-plan: application  
