@@ -5,5 +5,9 @@ The sample projects are arranged in different topics and are kept in different b
 
 ## Contents
 
-- [CAP: Using HANA DB Sequence](https://github.com/jcailan/cap-samples/tree/blog-db-sequence)
-- [CAP: Demystify User Authentication](https://github.com/jcailan/cap-samples/tree/blog-user-authentication)
+- Consuming External Services
+	- [Consume External Service - Part 1](https://github.com/jcailan/cap-samples/tree/blog-es-part1)
+	- [Consume External Service - Part 2](https://github.com/jcailan/cap-samples/tree/blog-es-part2)
+	- [Consume External Service - Part 3](https://github.com/jcailan/cap-samples/tree/blog-es-part3)
+- [Using HANA DB Sequence](https://github.com/jcailan/cap-samples/tree/blog-db-sequence)
+- [Demystify User Authentication](https://github.com/jcailan/cap-samples/tree/blog-user-authentication)
