@@ -1,0 +1,17 @@
+<mvc:View controllerName="com.demo.ui5tooling.controller.View" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<List items="{/SalesOrderSet}" noDataText="{masterView>/noDataText}" mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}" growing="true" growingScrollToLoad="true">
+						<items>
+							<ObjectListItem type="Navigation" title="{SalesOrderID}" number="{NetAmount}" />
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
