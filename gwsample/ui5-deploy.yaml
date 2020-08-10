@@ -1,0 +1,21 @@
+specVersion: "1.0"
+metadata:
+  name: "gwsample"
+type: application
+ui5Theme: sap_fiori_3
+builder:
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateVersionInfo
+      configuration:
+        target:
+          url: http://sample.host.com:8000
+          client: 100
+          auth: basic
+        credentials:
+          username: env:UI5_USERNAME
+          password: env:UI5_PASSWORD
+        app:
+          name: zgwsample
+          package: Z_DEMO_UI5_TOOLING
+          transport: XXXK900190
