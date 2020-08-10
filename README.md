@@ -5,12 +5,13 @@ The sample projects are arranged in different topics and are kept in different b
 
 ## Contents
 
-- SAP Cloud Application Programming Model (CAP)
+- **SAP Cloud Application Programming Model (CAP)**
 	- Consuming External Services
 		- [Consume External Service - Part 1](https://github.com/jcailan/cap-samples/tree/blog-es-part1)
 		- [Consume External Service - Part 2](https://github.com/jcailan/cap-samples/tree/blog-es-part2)
 		- [Consume External Service - Part 3](https://github.com/jcailan/cap-samples/tree/blog-es-part3)
 	- [Using HANA DB Sequence](https://github.com/jcailan/cap-samples/tree/blog-db-sequence)
 	- [Demystify User Authentication](https://github.com/jcailan/cap-samples/tree/blog-user-authentication)
-- SAP Fiori Tools
+- **SAP Fiori Tools**
 	- [SAPUI5 Freestyle App](https://github.com/jcailan/cap-samples/tree/blog-fiori-tools)
+	- [Deploy to ABAP server](https://github.com/jcailan/cap-samples/tree/blog-sft-deploy-to-abap)
