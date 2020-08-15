@@ -28,3 +28,6 @@ mta_archives/
 # IDEs
 .vscode
 .idea
+dist/
+.env
+archive.zip
