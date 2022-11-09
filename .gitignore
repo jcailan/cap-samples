@@ -1,11 +1,11 @@
-# CAP demo
+# CAP cap-samples
 _out
 *.db
 connection.properties
 default-*.json
+.cdsrc-private.json
 gen/
 node_modules/
-package-lock.json
 target/
 
 # Web IDE, App Studio
@@ -26,5 +26,5 @@ mta_archives/
 *.flattened-pom.xml
 
 # IDEs
-.vscode
-.idea
+# .vscode
+# .idea
