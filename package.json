@@ -64,7 +64,8 @@
 			},
 			"[production]": {
 				"auth": {
-					"kind": "xsuaa"
+					"kind": "xsuaa",
+					"restrict_all_services": false
 				}
 			}
 		}
