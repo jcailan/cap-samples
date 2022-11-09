@@ -8,7 +8,9 @@
 	"dependencies": {
 		"@sap-cloud-sdk/http-client": "^2.10.0",
 		"@sap/cds": "^6",
-		"express": "^4"
+		"express": "^4",
+		"@sap/xssec": "^3",
+		"passport": "^0"
 	},
 	"devDependencies": {
 		"sqlite3": "^5.0.4"
@@ -53,6 +55,16 @@
 					"credentials": {
 						"url": "https://services.odata.org/Experimental/OData/OData.svc"
 					}
+				},
+				"[production]": {
+					"credentials": {
+						"destination": "NorthWind"
+					}
+				}
+			},
+			"[production]": {
+				"auth": {
+					"kind": "xsuaa"
 				}
 			}
 		}
