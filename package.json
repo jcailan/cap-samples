@@ -6,6 +6,7 @@
 	"license": "MIT",
 	"private": true,
 	"dependencies": {
+		"@sap-cloud-sdk/http-client": "^2.10.0",
 		"@sap/cds": "^6",
 		"express": "^4"
 	},
@@ -47,7 +48,12 @@
 		"requires": {
 			"NorthWind": {
 				"kind": "odata",
-				"model": "srv/external/NorthWind"
+				"model": "srv/external/NorthWind",
+				"[backend]": {
+					"credentials": {
+						"url": "https://services.odata.org/Experimental/OData/OData.svc"
+					}
+				}
 			}
 		}
 	}
